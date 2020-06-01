@@ -15,9 +15,9 @@ export default class QwixxView {
       numberBoxes[i].addEventListener("click", event => {
         let regex = /box-(\d+)-(\d+)/;
 
-        // In the video, I used "event.target"; but, using numberBoxes[i]
+        // using numberBoxes[i]
         // is a better approach because it will work even if you have elements
-        // nested inside your number boxes.
+        // nested inside your number boxes
         let [, row, column] = numberBoxes[i].id.match(regex);
         callback(row, column);
       });

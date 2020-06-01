@@ -85,6 +85,7 @@ export default class QwixxModel {
     this.points = total;
   }
 
+  // Probably should have used an array and looped through it instead of using case statements.
   setScore(score, w, c) {
     //Mark Dice Used
     this.whiteDiceUsed = w;
@@ -153,7 +154,7 @@ export default class QwixxModel {
     this.updatePoints(this.pointArray);
   }
 
-  //Get Valid options for the white dice combanation
+  //Get Valid options for the white dice combination
   //set this.valid1 to the array of options
   getValidOptions1(whiteDiceArray, diceArray) {
     let sum = whiteDiceArray[0] + whiteDiceArray[1];
